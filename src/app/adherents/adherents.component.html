@@ -1,0 +1,29 @@
+
+<div class="col-9" >
+  <div class="card text-white">
+      <div class="card-header bg-success"> <h5>Liste des Adhérants </h5>
+
+    </div>
+    <div class="card-body">
+      <a routerLink="/AddAdherant" class="btn btn-primary">Ajouter un Adhérant</a>
+      <table class="table table-hover">
+          <thead class="thead-light">
+            <tr><th>ID</th><th>Nom et Prenom</th><th>Email</th></tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <tr *ngFor="let A of adherant">
+                      <td>{{ A.id }}</td>
+                      <td>{{ A.nom }}</td>
+                      <td>{{ A.email }}</td>
+                      <td>
+                  <td><a routerLink="/adherants" class="btn btn-danger" (click)="deleteAdherant(A.id)">supprimer</a> </td>
+              </tr>
+
+
+          </tbody>
+
+      </table>
+    </div>
+  </div>
+</div>

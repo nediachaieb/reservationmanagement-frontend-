@@ -1,0 +1,36 @@
+<div class="card mb-4">
+        <div class="card-header bg-primary text-white">
+          <h5>Ajouter un Nouveau Terrain</h5>
+        </div>
+        <div class="card-body">
+          <form (ngSubmit)="addTerrain()" class="row g-3">
+            <div class="col-md-6">
+              <label for="nom" class="form-label">Nom du Terrain</label>
+              <input
+                [(ngModel)]="newTerrain.nom"
+                type="text"
+                id="nom"
+                name="nom"
+                class="form-control"
+                placeholder="Ex: Stade Central"
+                required
+              />
+            </div>
+            <div class="col-md-6">
+              <label for="surface" class="form-label">Surface</label>
+              <input
+                [(ngModel)]="newTerrain.surface"
+                type="text"
+                id="surface"
+                name="surface"
+                class="form-control"
+                placeholder="Ex: 500m²"
+                required
+              />
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-success">Ajouter Terrain</button>
+            </div>
+          </form>
+        </div>
+  </div>
